@@ -1,0 +1,9 @@
+.body--contenedor_grilla{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body--grilla_servicios{
+    box-sizing: 30px 30px;
+    color: red;
+}
