@@ -7,9 +7,15 @@ html {
   font-size: 62.5%;
   font-family: "Caveat", cursive;
   font-family: "Satisfy", cursive;
+
+  --fuente-caveat: "Caveat", cursive;
+  --fuente-satisfy: "Satisfy", cursive;
   --color-fondo: rgba(238, 64, 194, 0.11);
   --color-primario: rgba(238, 64, 194, 0.3);
+  --color-secundario: rgba(238, 130, 194, 0.3);
   --color-sombra: rgba(44, 44, 44, 0.11);
+
+  --brillo-hover: 0 0 60px 10px rgba(233, 233, 233, 0.8);
 }
 
 body {
@@ -25,16 +31,14 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar:hover {
   transition-duration: 500ms;
-  background-color: var(--color-primario);
+  background-color: var(--color-secundario);
 }
 
 body::-webkit-scrollbar-track:hover {
   background-color: var(--color-sombra); /* color tracking area */
-
 }
 
 body::-webkit-scrollbar-thumb:hover {
-
   background-color: var(--color-primario); /* color puntas */
   border-radius: 20px; /* circunferencia puntas */
   border: 3px solid var(--color-fondo); /* creates padding around scroll thumb */
@@ -66,9 +70,10 @@ header nav {
 }
 
 .nav_button__button:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   transition-duration: 500ms;
   cursor: pointer;
+  box-shadow: var(--brillo-hover);
 }
 
 .button__img {
@@ -104,12 +109,13 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .main--contenedor_grilla {
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
   justify-content: center;
-  width: 95vw;
+  width: calc(90vw);
 }
 
 .section--grilla_servicios {
@@ -126,14 +132,36 @@ main {
   background-size: cover;
 }
 
+/* TODO: modificar esta propiedad al aumentar tamaño de pantalla */
+.main--contenedor_grilla:hover > .section--grilla_servicios:not(:hover){
+  filter: blur(2px);
+}
+
+
 .section--grilla_servicios:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition-duration: 500ms;
+  box-shadow: var(--brillo-hover);
+  cursor: pointer;
+}
+.card-data {
+  width: calc(70vw / 3);
+  height: fit-content;
+  background-color: rgb(151, 133, 147);
+  filter: blur(12px);
+}
+
+.card-title,
+.card-info,
+.precio {
+  font-family: var(--fuente-caveat);
+  color: rgba(238, 232, 232, 0.925);
 }
 
 .grilla_servicios__box1 {
   background-image: url(https://source.unsplash.com/random/450x800/?nails&img=1);
 }
+
 .grilla_servicios__box2 {
   background-image: url(https://source.unsplash.com/random/450x800/?nails&img=20);
 }
