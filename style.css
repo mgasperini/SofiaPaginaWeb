@@ -132,6 +132,8 @@ main {
   background-size: cover;
 
   overflow: hidden; 
+
+  overflow: hidden; 
 }
 
 /* TODO: modificar esta propiedad al aumentar tamaño de pantalla */
