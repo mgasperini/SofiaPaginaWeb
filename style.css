@@ -152,15 +152,12 @@ main {
   opacity: 1;
   visibility: visible;
   transform: translateY(calc(90vw / 3 /2));
-  
 }
 
 .card-data__background {
 
   width:auto;
-  /* height: calc(90vw / 3 * 0.2); */
   height: auto;
-  /* margin-bottom: calc(90vw / 3 * 0.8); */
 
   border-radius: 15px;
   box-shadow: var(--brillo-hover);
