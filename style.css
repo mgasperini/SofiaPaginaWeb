@@ -132,6 +132,8 @@ main {
   background-size: cover;
 
   overflow: hidden; 
+
+  overflow: hidden; 
 }
 
 /* TODO: modificar esta propiedad al aumentar tamaño de pantalla */
@@ -152,7 +154,6 @@ main {
   opacity: 1;
   visibility: visible;
   transform: translateY(calc(90vw / 3 /2));
-  
 }
 
 .card-data__background {
